@@ -1,0 +1,33 @@
+.button {
+    flex: 1 1 auto;
+    width: 205px;
+    margin: 10px 10px 10px 0;
+    padding: 20px;
+    border: 2px solid black;
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.button:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: black;
+}
+
+.button:hover {
+    cursor: pointer;
+    border-radius: 30px;
+}
+.button:hover:after {
+    width: 0;
+    left: 0;
+}
