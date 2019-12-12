@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="h-100">
 <head>
     <meta charset="UTF-8">
     <title>Simpson RPG</title>
@@ -7,21 +7,50 @@
     <link rel="stylesheet" href="style.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-    <script src="persos.js"></script>
-    <script src="script.js"></script>
 </head>
-<body>
-<main>
-    <div class="d-flex flex-column align-items-center">
-        <h1>Les Simpson - Le RPG OFFICIEL</h1>
+<body class="h-100">
+<main class="h-100 d-flex flex-column justify-content-center align-items-center">
 
-        <div id="story"></div>
+    <h1>Les Simpson RPG</h1>
 
-        <div id="mesboutons">
-            <div class="button" onclick="begin()">Commencer</div>
+    <div class="d-flex flex-row align-items-center justify-content-between h-100 w-100">
+
+
+        <div id="myherostats" class="d-flex flex-column">
+            <div id="myherosgif"></div>
+            <div class="d-flex flex-row">Héros : <p id="heroname"></p></div>
+            <div class="d-flex flex-row">HP : <p id="herohp"></p></div>
+            <div class="d-flex flex-row">XP : <p id="heroxp"></p></div>
+            <div class="d-flex flex-row">FORCE : <p id="heroforce"></p></div>
+            <div class="d-flex flex-row">RESISTANCE : <p id="herores"></p></div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center">
+
+            <div id="story"></div>
+
+            <div id="mesboutons">
+                <div class="button" onclick="begin()">Commencer</div>
+            </div>
+
+            <div id="mesactions"></div>
+        </div>
+
+        <div id="ennemistats" class="d-flex flex-column">
+            <div id="myennemigif"></div>
+            <div class="d-flex flex-row">Ennemi : <p id="enneminame"></p></div>
+            <div class="d-flex flex-row">HP : <p id="ennemihp"></p></div>
+            <div class="d-flex flex-row">FORCE : <p id="ennemiforce"></p></div>
+            <div class="d-flex flex-row">RESISTANCE : <p id="ennemires"></p></div>
         </div>
 
     </div>
 </main>
 </body>
+
+
+<script src="persos.js"></script>
+<script src="fight.js"></script>
+<script src="script.js"></script>
+<!--<script src="animations.js"></script>-->
 </html>

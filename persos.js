@@ -22,7 +22,7 @@ let Maggie = new Heros("Maggie", 10, 90, 50, 10);
 
 let vendeur_BD = new Personnage("Jeff le vendeur de BD", 15, 5, 1);
 let alcoholic_man = new Personnage("Homme alcoolisé", 1, 3, 5);
-let family_member = ''; //On fait un random et on met les valeurs correspondantes au personnage (voir ci-dessus)
+let family_member = new Personnage("Membre de la famille", 70, 30, 20);
 let Mr_Burns = new Personnage("Monsieur Burns", 10, 10, 1);
 let Tahiti_Bob = new Personnage("Tahiti Bob", 20, 13, 6);
 let reverant = new Personnage("Révérant Lovejoy", 150, 40, 75);
