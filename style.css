@@ -1,6 +1,8 @@
 body{
     background-image: url("fond.jpg");
     background-size: cover;
+    font-family: 'Game', Arial, serif;
+    font-size: 2em;
 }
 
 h1{
@@ -16,10 +18,59 @@ img{
     text-align: center;
 }
 
+/**********Animation*****************/
+/*#story p {*/
+    /*text-align: center;*/
+    /*overflow: hidden; !* Ensures the content is not revealed until the animation *!*/
+    /*border-right: .15em solid orange; !* The typwriter cursor *!*/
+    /*white-space: nowrap; !* Keeps the content on a single line *!*/
+    /*margin: 0 auto; !* Gives that scrolling effect as the typing happens *!*/
+    /*letter-spacing: .15em; !* Adjust as needed *!*/
+    /*animation:*/
+            /*typing 3.5s steps(40, end),*/
+            /*blink-caret .75s step-end infinite;*/
+/*}*/
+
+/*!* The typing effect *!*/
+/*@keyframes typing {*/
+    /*from { width: 0 }*/
+    /*to { width: 100% }*/
+/*}*/
+
+/*!* The typewriter cursor effect *!*/
+/*@keyframes blink-caret {*/
+    /*from, to { border-color: transparent }*/
+    /*50% { border-color: orange; }*/
+/*}*/
+
+/****************************************************************/
+
+
+
+
+
+
+
+#myherostats{
+    width: 270px;
+    font-size: 1em;
+    border-right: 1px solid black;
+    padding-left: 20px;
+    padding-right: 40px;
+}
+
+#ennemistats{
+    width: 270px;
+    font-size: 1em;
+    border-left: 1px solid black;
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
 .button {
     flex: 1 1 auto;
     width: 205px;
-    margin: 10px 10px 10px 0;
+    margin: 10px;
     padding: 20px;
     border: 2px solid black;
     color: black;
@@ -53,4 +104,9 @@ img{
 @font-face {
     font-family: 'Simpson';
     src: url("Simpsonfont.otf");
+}
+
+@font-face {
+    font-family: 'Game';
+    src: url("HalfEighties.ttf");
 }

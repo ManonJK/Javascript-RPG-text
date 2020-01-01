@@ -5,7 +5,7 @@
     <title>Simpson RPG</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
 </head>
 <body class="h-100">
@@ -18,27 +18,29 @@
 
         <div id="myherostats" class="d-flex flex-column">
             <div id="myherosgif"></div>
-            <div class="d-flex flex-row">Héros : <p id="heroname"></p></div>
-            <div class="d-flex flex-row">HP : <p id="herohp"></p></div>
-            <div class="d-flex flex-row">XP : <p id="heroxp"></p></div>
-            <div class="d-flex flex-row">FORCE : <p id="heroforce"></p></div>
-            <div class="d-flex flex-row">RESISTANCE : <p id="herores"></p></div>
+            <div class="d-flex flex-row">Héros: <p id="heroname"></p></div>
+            <div class="d-flex flex-row">HP: <p id="herohp"></p></div>
+            <div class="d-flex flex-row">XP: <p id="heroxp"></p></div>
+            <div class="d-flex flex-row">FORCE: <p id="heroforce"></p></div>
+            <div class="d-flex flex-row">RESISTANCE: <p id="herores"></p></div>
         </div>
 
         <div class="d-flex flex-column align-items-center">
 
             <div id="story"></div>
 
-            <div id="mesboutons">
-                <div class="button" onclick="begin()">Commencer</div>
+            <div id="mesboutons" class="d-flex flex-row justify-content-center align-items-center">
+                <div class="button" id="thebeggining" onclick="begin()">Commencer</div>
             </div>
 
-            <div id="mesactions"></div>
+            <div id="mesactions">
+                <div class="button" id="theattack" style="display: none;" onclick="attack()">Attaquer</div>
+            </div>
         </div>
 
         <div id="ennemistats" class="d-flex flex-column">
             <div id="myennemigif"></div>
-            <div class="d-flex flex-row">Ennemi : <p id="enneminame"></p></div>
+            <div class="d-flex flex-row flex-shrink-0">Ennemi : <p id="enneminame"></p></div>
             <div class="d-flex flex-row">HP : <p id="ennemihp"></p></div>
             <div class="d-flex flex-row">FORCE : <p id="ennemiforce"></p></div>
             <div class="d-flex flex-row">RESISTANCE : <p id="ennemires"></p></div>
@@ -52,5 +54,6 @@
 <script src="persos.js"></script>
 <script src="fight.js"></script>
 <script src="script.js"></script>
-<!--<script src="animations.js"></script>-->
+<script src="story.js"></script>
+<script src="animations.js"></script>
 </html>
