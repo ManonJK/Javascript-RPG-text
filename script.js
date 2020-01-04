@@ -3,6 +3,12 @@ let TheHero;
 let TheEnnemi;
 let histoire = 1;
 let Texte;
+let end = false;
+
+// function displayElements(){
+//     document.getElementById("myherostats").style.display = 'flex';
+//     document.getElementById("ennemistats").style.display = 'flex';
+// }
 
 function ChooseHero(value){
     EraseChoices();

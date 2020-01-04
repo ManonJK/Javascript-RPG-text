@@ -6,17 +6,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>-->
 </head>
-<body class="h-100">
+<body id="body" class="h-100">
+
 <main class="h-100 d-flex flex-column justify-content-center align-items-center">
 
-    <h1>Les Simpson RPG</h1>
+    <div class="content">
+        <div class="cover first"></div>
+        <div class="cover second"></div>
+        <div class="cover third"></div>
+        <div class="text">
+            <h1>Les Simpson RPG</h1>
+        </div>
+    </div>
 
-    <div class="d-flex flex-row align-items-center justify-content-between h-100 w-100">
+
+    <div id="milieu" class="flex-row align-items-center justify-content-center h-100 w-100">
 
 
-        <div id="myherostats" class="d-flex flex-column">
+        <div id="myherostats" class="flex-column">
             <div id="myherosgif"></div>
             <div class="d-flex flex-row">Héros: <p id="heroname"></p></div>
             <div class="d-flex flex-row">HP: <p id="herohp"></p></div>
@@ -25,11 +34,11 @@
             <div class="d-flex flex-row">RESISTANCE: <p id="herores"></p></div>
         </div>
 
-        <div class="d-flex flex-column align-items-center">
+        <div id="mystorypanel" class="d-flex flex-column align-items-center">
 
             <div id="story"></div>
 
-            <div id="mesboutons" class="d-flex flex-row justify-content-center align-items-center">
+            <div id="mesboutons" class="d-flex flex-row justify-content-center align-items-center w-100">
                 <div class="button" id="thebeggining" onclick="begin()">Commencer</div>
             </div>
 
@@ -38,12 +47,12 @@
             </div>
         </div>
 
-        <div id="ennemistats" class="d-flex flex-column">
+        <div id="ennemistats" class="flex-column">
             <div id="myennemigif"></div>
-            <div class="d-flex flex-row flex-shrink-0">Ennemi : <p id="enneminame"></p></div>
-            <div class="d-flex flex-row">HP : <p id="ennemihp"></p></div>
-            <div class="d-flex flex-row">FORCE : <p id="ennemiforce"></p></div>
-            <div class="d-flex flex-row">RESISTANCE : <p id="ennemires"></p></div>
+            <div class="d-flex flex-row flex-shrink-0">Ennemi: <p id="enneminame"></p></div>
+            <div class="d-flex flex-row">HP: <p id="ennemihp"></p></div>
+            <div class="d-flex flex-row">FORCE: <p id="ennemiforce"></p></div>
+            <div class="d-flex flex-row">RESISTANCE: <p id="ennemires"></p></div>
         </div>
 
     </div>
@@ -55,5 +64,8 @@
 <script src="fight.js"></script>
 <script src="script.js"></script>
 <script src="story.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<!--<script src="node_modules/animejs/lib/anime.js"></script>-->
 <script src="animations.js"></script>
 </html>

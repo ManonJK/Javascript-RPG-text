@@ -1,7 +1,9 @@
 function begin() {
     switch (histoire) {
         case 1 :
+            affichetout();
             document.getElementById("thebeggining").innerHTML = "Continuer";
+            // document.getElementById("thebeggining").onclick = begin;
             Texte = "Bonjour. <br>Vous vous réveillez dans votre chambre, tranquillement. <br> Vous vous levez, et vous placez devant votre mirroir. <br> Que voyez-vous ?";
             document.getElementById("mesboutons").innerHTML += "<button class='choice button' value='Homer' onclick='ChooseHero(Homer)'>Homer</button>";
             document.getElementById("mesboutons").innerHTML += "<button class='choice button' value='Marge' onclick='ChooseHero(Marge)'>Marge</button>";
@@ -59,6 +61,7 @@ function begin() {
             histoire = 18;
         break;
         case 10 :
+            document.getElementById("thebeggining").style.display = "flex";
             Texte = "Vous laissez gagner votre adversaire et perdez 1 de résistence mais gagnez 3 de gentillesse (ça ne risque pas de vous servir..)";
             TheHero.resistence -= 1;
             WriteTxt("herores", TheHero.resistence);
@@ -73,7 +76,7 @@ function begin() {
             document.getElementById("thebeggining").style.display = "none";
             Texte = "Une fois la télécommande en main, vous...";
             document.getElementById("mesboutons").innerHTML += "<button class='choice button' value='itchy' onclick='histoire=13;EraseChoices(); begin();'>Regardez Itchy et Scratchy</button>";
-            document.getElementById("mesboutons").innerHTML += "<button class='choice button' value='cacahuetes' onclick='histoire=14;EraseChoices(); begin();'>Aller cherches des cacahuètes avant d'allumer la télé</button>";
+            document.getElementById("mesboutons").innerHTML += "<button class='choice button' value='cacahuetes' onclick='histoire=14;EraseChoices(); begin();'>Allez chercher des cacahuètes avant d'allumer la télé</button>";
         break;
         case 13 :
             Texte = "Vous êtes un gros flemmard, dommage : - 1 de résistence";
@@ -104,6 +107,7 @@ function begin() {
             document.getElementById("mesboutons").innerHTML += "<button class='choice button' value='trauma' onclick='histoire=18;EraseChoices(); begin();'>Heuuuu... STOP !!</button>";
         break;
         case 17 :
+            document.getElementById("thebeggining").style.display = "flex";
             Texte = "Qu'elle force d'esprit ! Vous gagnez 5 points de résistence";
             TheHero.resistence += 5;
             WriteTxt("herores", TheHero.resistence);
@@ -180,7 +184,7 @@ function begin() {
             histoire = 30;
         break;
         case 30 :
-            document.getElementById("thebeggining").style.display = "none";
+            document.getElementById("thebeggining").style.display = "flex";
             Texte = "Vous profitez d'être seul(e) pour faire ce que bon vous semble et traîner dans la maison.<br>L'ennui vous guette...<br>- 2 de résistence et -1 de force";
             TheHero.resistence -= 2;
             TheHero.force -= 1;
@@ -216,13 +220,20 @@ function begin() {
             WriteTxt("heroforce", TheHero.force);
         break;
         case 35 :
-            Texte = "Quelqu'un se rappoche de vous, vous sentez sa présence...<br>Plus rien. Il n'y a plus rien.<br>Vous vous retournez.... et votre mère se tient debout devant vous, le regard froid<br>Elle est énervée que vous n'ayez pas fait vos devoirs et à débranché votre PC.<br>Vous n'avez plus d'autre choix que d'aller travailler, et laisser Les Simpson...<br>A une prochaine fois peut-être !";
+            Texte = "Quelqu'un se rappoche de vous, vous sentez sa présence...<br>Plus rien. Il n'y a plus rien.<br>Vous vous retournez.... et votre mère se tient debout devant vous, le regard froid<br>Elle est énervée que vous n'ayez pas fait vos devoirs et à débranché votre PC.<br>Vous n'avez plus d'autre choix que d'aller travailler, et laisser Les Simpson...";
+        break;
+        case 36 :
+            end = true;
+            Texte = "A une prochaine fois peut-être !";
             document.getElementById("mesboutons").innerHTML = "<button class='button' onclick='replay()'>Recommencer</button>"; //On met un bouton qui reload la page pour replay
         break;
         default:
             Texte = "Il semblerait qu'il y ait un problème dans le script...dommage...";
         break;
     }
-    WriteTxt("story", Texte);
+    WriteStory(Texte);
     histoire ++;
+    if (end === true){
+        confettis();
+    }
 }

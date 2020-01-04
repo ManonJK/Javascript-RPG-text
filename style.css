@@ -1,3 +1,7 @@
+{
+    transition: all 2s linear;
+}
+
 body{
     background-image: url("fond.jpg");
     background-size: cover;
@@ -8,6 +12,7 @@ body{
 h1{
     font-family: 'Simpson', Arial, serif;
     margin-top: 20px;
+    font-size: 5rem;
 }
 
 img{
@@ -47,12 +52,21 @@ img{
 
 
 
+#thebeggining{
+    display: none;
+}
 
+#milieu{
+    display: none;
+}
 
-
+#mesboutons{
+    flex-wrap: wrap;
+}
 
 #myherostats{
-    width: 270px;
+    display : none;
+    width: 15%;
     font-size: 1em;
     border-right: 1px solid black;
     padding-left: 20px;
@@ -60,15 +74,21 @@ img{
 }
 
 #ennemistats{
-    width: 270px;
+    display: none;
+    width: 15%;
     font-size: 1em;
     border-left: 1px solid black;
-    padding-right: 20px;
-    padding-left: 40px;
+    padding-right: 10px;
+    padding-left: 20px;
+}
+
+#mystorypanel{
+    width: 70%;
 }
 
 .button {
-    flex: 1 1 auto;
+    /*flex: 1 1 auto;*/
+    background-color: rgb(254,212,32);
     width: 205px;
     margin: 10px;
     padding: 20px;
@@ -94,7 +114,10 @@ img{
 
 .button:hover {
     cursor: pointer;
-    border-radius: 30px;
+    transform: scale(1.08);
+    box-shadow: -1px 0 25px 0 rgba(0,0,0,0.48);
+    -webkit-box-shadow: -1px 0 25px 0 rgba(0,0,0,0.48);
+    -moz-box-shadow: -1px 0 25px 0 rgba(0,0,0,0.48);
 }
 .button:hover:after {
     width: 0;
@@ -109,4 +132,81 @@ img{
 @font-face {
     font-family: 'Game';
     src: url("HalfEighties.ttf");
+}
+
+.content {
+    /*background-color: #FED420;*/
+    text-align: center;
+    width: 800px;
+    /*top: 40%;*/
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    /*transform: translateY(+300);*/
+}
+
+.cover{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 33%;
+    background: linear-gradient(to right, #17A589, #2ECC71);
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 10px;
+}
+
+.first{
+    top: 0;
+}
+
+.second{
+    top: 33%;
+}
+
+.third{
+    top: 66%;
+}
+
+/*CSS qui sert à l'animation du bouton commencer*/
+
+.show{
+    display: block!important;
+    opacity:0;
+}
+
+.animated{
+    animation: appear 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*********CSS pour le canvas de fin**********/
+main{
+    z-index: 5;
+}
+
+.fireworks{
+    z-index: -3;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
