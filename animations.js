@@ -57,6 +57,7 @@ let story = document.getElementById('story');
 let typewriter = new Typewriter(story, {
     loop: false,
     cursor: '',
+    delay: 50,
     // changeDelay: 100,
 });
 
