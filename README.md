@@ -6,5 +6,5 @@ Technos utilisées :
 * HTML5
 * CSS3
 
-Bibliotèque utilisée :
+Bibliothèque utilisée :
 * animejs
